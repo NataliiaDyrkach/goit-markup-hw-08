@@ -1,0 +1,73 @@
+.worklist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.worklist__project {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+  transition: box-shadow 250ms $transition-timing-function;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    border: 1px solid #eeeeee;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+}
+
+.worklist__title {
+  margin: 20px 0 4px 24px;
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.worklist__text {
+  margin: 0 0 20px 24px;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.worklist__img {
+  display: block;
+}
+
+.worklist__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.worklist__text--thumb {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  margin: 0;
+  padding: 64px 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: $primary-white-color;
+  transform: translateY(100%);
+  transition: transform 250ms $transition-timing-function;
+
+  .worklist__project:hover & {
+    transform: translateY(0);
+  }
+}
