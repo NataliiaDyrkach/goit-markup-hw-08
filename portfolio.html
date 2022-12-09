@@ -24,22 +24,39 @@
         <nav>
           <ul class="site-nav">
             <li><a href="./index.html" class="site-nav__link">Студія</a></li>
-            <li><a href="#" class="site-nav__link site-nav__link--active">Портфоліо</a></li>
+            <li>
+              <a href="#" class="site-nav__link site-nav__link--active"
+                >Портфоліо</a
+              >
+            </li>
             <li><a href="#" class="site-nav__link">Контакти</a></li>
           </ul>
         </nav>
         <div class="header-adress">
           <a href="mailto:info@devstudio.com" class="header-adress__link"
-            ><svg class="header-adress__icon header-adress__mailicon" width="16" heigth="12">
+            ><svg
+              class="header-adress__icon header-adress__mailicon"
+              width="16"
+              heigth="12"
+            >
               <use href="./images/icons.svg#icon-mail"></use></svg
             ><span>info@devstudio.com</span></a
           >
           <a href="tel:+380961111111" class="header-adress__link"
-            ><svg class="header-adress__icon header-adress__phoneicon" width="10" heigth="16">
+            ><svg
+              class="header-adress__icon header-adress__phoneicon"
+              width="10"
+              heigth="16"
+            >
               <use href="./images/icons.svg#icon-smartphone"></use></svg
             ><span>+38 096 111 11 11</span>
           </a>
         </div>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="icon-menu_mob" width="40" height="40" aria-label="Підключення мобільного меню">
+            <use href="./images/icons.svg#icon-menu_mob"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -49,21 +66,37 @@
           <div class="buttonlist">
             <h1 class="visually-hidden">Наші проекти</h1>
             <ul class="butlist">
-              <li><button class="butlist__but" type="button">Усі</button></li>
-              <li><button class="butlist__but" type="button">Веб-сайти</button></li>
-              <li><button class="butlist__but" type="button">Додатки</button></li>
-              <li><button class="butlist__but" type="button">Дизайн</button></li>
-              <li><button class="butlist__but" type="button">Маркетинг</button></li>
+              <li class="butlist__item">
+                <button class="butlist__but" type="button">Усі</button>
+              </li>
+              <li class="butlist__item">
+                <button class="butlist__but" type="button">Веб-сайти</button>
+              </li>
+              <li class="butlist__item">
+                <button class="butlist__but" type="button">Додатки</button>
+              </li>
+              <li class="butlist__item">
+                <button class="butlist__but" type="button">Дизайн</button>
+              </li>
+              <li class="butlist__item">
+                <button class="butlist__but" type="button">Маркетинг</button>
+              </li>
             </ul>
           </div>
           <!-- СПИСОК PROJECT -->
           <ul class="worklist">
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img"
-                  src="./images/proekt1.jpg"
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt1@354.jpg 354w,
+                    ./images/proekt1@370.jpg 370w,
+                    ./images/proekt1@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt1@370.jpg"
                   alt="Сайт компанії"
-                  width="370"
                 />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -76,7 +109,18 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt2.jpg" alt="Постер баскетбольної команди" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt2@354.jpg 354w,
+                    ./images/proekt2@370.jpg 370w,
+                    ./images/proekt2@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt2@370.jpg"
+                  alt="Постер баскетбольної команди"
+                 
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -88,7 +132,18 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt3.jpg" alt="Мобільний додаток для ресторану" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt3@354.jpg 354w,
+                    ./images/proekt3@370.jpg 370w,
+                    ./images/proekt3@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt3@370.jpg"
+                  alt="Мобільний додаток для ресторану"
+                  
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -100,7 +155,18 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt4.jpg" alt="Маркетинговий проект" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt4@354.jpg 354w,
+                    ./images/proekt4@370.jpg 370w,
+                    ./images/proekt4@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt4@370.jpg"
+                  alt="Маркетинговий проект"
+                
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -112,7 +178,17 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt5.jpg" alt="Мобільний додаток для пакувальної компанії" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt5@354.jpg 354w,
+                    ./images/proekt5@370.jpg 370w,
+                    ./images/proekt5@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt5@370.jpg"
+                  alt="Мобільний додаток для пакувальної компанії"
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -124,7 +200,19 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt6.jpg" alt="Сайт соціальної компанїї" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt6@354.jpg 354w,
+                    ./images/proekt6@370.jpg 370w,
+                    ./images/proekt6@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt6@370.jpg"
+                
+                  alt="Сайт соціальної компанїї"
+                  
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -136,7 +224,19 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt7.jpg" alt="Дизайн макету журналу" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt7@354.jpg 354w,
+                    ./images/proekt7@370.jpg 370w,
+                    ./images/proekt7@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt7@370.jpg"
+                  
+                  alt="Дизайн макету журналу"
+                
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -148,7 +248,19 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt8.jpg" alt="Проект маркетингу лаб" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt8@354.jpg 354w,
+                    ./images/proekt8@370.jpg 370w,
+                    ./images/proekt8@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt8@370.jpg"
+                  
+                  alt="Проект маркетингу лаб"
+                  
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -160,7 +272,19 @@
             </li>
             <li class="worklist__project">
               <div class="worklist__thumb">
-                <img class="worklist__img" src="./images/proekt9.jpg" alt="Додаток для бізнес сайту" width="370" />
+                <img
+                  class="worklist__img"
+                  srcset="
+                    ./images/proekt9@354.jpg 354w,
+                    ./images/proekt9@370.jpg 370w,
+                    ./images/proekt9@450.jpg 450w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px,(min-width: 480px) 450px"
+                  src="./images/proekt9@370.jpg"
+                  
+                  alt="Додаток для бізнес сайту"
+                 
+                />
                 <div class="worklist__text worklist__text--thumb">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -233,17 +357,72 @@
         <div class="subscribe__section">
           <h3 class="subscribe__title">Підпишіться на розсилку</h3>
           <form name="subscribe__form" class="subscribe__form">
-            <input type="email" name="mail-input" class="subscribe__input" placeholder="E-mail" />
+            <input
+              type="email"
+              name="mail-input"
+              class="subscribe__input"
+              placeholder="E-mail"
+            />
             <button type="submit" class="subscribe__button button">
               Підписатися
-              <span class="icon"><svg class="icon__send" width="24" height="24">
-                  <use href="/images/icons.svg#icon-send"></use>
-                </svg></span>
+              <span class="icon"
+                ><svg class="icon__send" width="24" height="24">
+                  <use href="/images/icons.svg#icon-send"></use></svg
+              ></span>
             </button>
           </form>
         </div>
       </div>
     </footer>
+    <!-- МОБІЛЬНЕ МЕНЮ -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="icon-close_mob" width="40" height="40">
+          <use href="./images/icons.svg#icon-close_mob"></use>
+        </svg>
+      </button>
+      <div class="mobile-block">
+        <ul class="mobile-menu">
+          <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link mobile-menu__link--active">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link">Контакти</a>
+          </li>
+        </ul>
+        <div class="contact-block">
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="" class="mobile-contacts__link mobile-contacts__tel">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="" class="mobile-contacts__link mobile-contacts__mail">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link mobile-social__af">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link mobile-social__af">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link mobile-social__af">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
